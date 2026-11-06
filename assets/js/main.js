@@ -213,5 +213,10 @@
   };
   broadcastButton?.addEventListener("click", broadcastCoordinates);
   resetForestButton?.addEventListener("click", resetForest);
+  const remoteDocLink = document.querySelector('.ending-section__actions a[download]');
+  if (remoteDocLink) {
+    remoteDocLink.href = 'docs/作品说明.md';
+    remoteDocLink.removeAttribute('download');
+  }
   window.addEventListener("pageshow", updateHeader);
 })();
