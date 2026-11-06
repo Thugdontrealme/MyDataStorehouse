@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="三体宇宙主题课程设计网页，以星际档案的形式呈现三体文明的纪元、人物、黑暗森林法则与经典场景。">
+  <meta name="theme-color" content="#05070b">
+  <title>三体宇宙 | 文明档案</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳至主要内容</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#home" aria-label="三体宇宙首页">
+        <span class="brand__mark" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </span>
+        <span class="brand__text">
+          <strong>三体宇宙</strong>
+          <small>THREE-BODY UNIVERSE</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+        <span class="sr-only">打开导航菜单</span>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="主要导航">
+        <a class="site-nav__link is-active" href="#home">起点</a>
+        <a class="site-nav__link" href="#eras">纪元</a>
+        <a class="site-nav__link" href="#civilizations">文明</a>
+        <a class="site-nav__link" href="#characters">人物</a>
+        <a class="site-nav__link" href="#dark-forest">法则</a>
+        <a class="site-nav__link" href="#archives">档案</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <canvas class="hero__stars" id="starfield" aria-hidden="true"></canvas>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--one" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--two" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow hero__eyebrow reveal">
+            <span class="eyebrow__line"></span>
+            半人马座 α 星系 · 绝密文明档案
+          </p>
+
+          <h1 class="hero__title reveal" id="hero-title">
+            <span class="hero__title-line">三体</span>
+            <span class="hero__title-line hero__title-line--outline">宇宙</span>
+          </h1>
+
+          <p class="hero__lead reveal">在四光年之外，文明的答案从来不止一个。</p>
+          <p class="hero__description reveal">
+            三颗太阳、一片乱纪元、两个文明。这里收录了一场跨越数百年的宇宙博弈，
+            以及人类在黑暗森林中点亮过的每一束微光。
+          </p>
+
+          <div class="hero__actions reveal">
+            <a class="button button--primary" href="#eras">
+              <span>进入宇宙</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="button button--ghost" href="#signal">
+              解码遥远信号
+              <span class="button__dot" aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <dl class="hero__stats reveal">
+            <div>
+              <dt>恒星系统</dt>
+              <dd><strong>03</strong><span>颗太阳</span></dd>
+            </div>
+            <div>
+              <dt>最近距离</dt>
+              <dd><strong>4.22</strong><span>光年</span></dd>
+            </div>
+            <div>
+              <dt>文明档案</dt>
+              <dd><strong>∞</strong><span>种可能</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="coordinate-card">
+            <span class="coordinate-card__label">CURRENT COORDINATE</span>
+            <strong>α CEN · 03</strong>
+            <span class="coordinate-card__status"><i></i> SIGNAL LOCKED</span>
+          </div>
+
+          <div class="solar-system" id="solar-system">
+            <span class="orbit orbit--outer"></span>
+            <span class="orbit orbit--middle"></span>
+            <span class="orbit orbit--inner"></span>
+            <span class="orbit__line orbit__line--one"></span>
+            <span class="orbit__line orbit__line--two"></span>
+            <span class="sun sun--one"></span>
+            <span class="sun sun--two"></span>
+            <span class="sun sun--three"></span>
+            <span class="solar-core"></span>
+            <span class="planet planet--one"><i></i></span>
+            <span class="planet planet--two"><i></i></span>
+          </div>
+
+          <div class="hero__visual-text">
+            <span>YOU ARE HERE</span>
+            <span>地球 · 太阳系</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#signal" aria-label="向下滚动到文明信号">
+        <span>SCROLL TO DECODE</span>
+        <i></i>
+      </a>
+
+      <p class="hero__side-note" aria-hidden="true">DON'T ANSWER · DON'T ANSWER · DON'T ANSWER</p>
+    </section>
+
+    <section class="signal-section section" id="signal" aria-labelledby="signal-title">
+      <div class="container signal-layout">
+        <div class="section-heading section-heading--wide reveal">
+          <p class="eyebrow"><span>01</span> / SIGNAL</p>
+          <h2 id="signal-title">你收到了一条<br><em>来自四光年外的信号</em></h2>
+          <p class="section-heading__description">
+            1971 年，红岸基地向宇宙发出了人类的第一声问候。
+            八年后，回复抵达。它没有问候，只有一句反复出现的警告。
+          </p>
+        </div>
+
+        <div class="signal-console reveal" data-signal-console>
+          <div class="signal-console__topbar">
+            <div class="console-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span>RED_COAST / RX-03</span>
+            <span class="console-live"><i></i> RECEIVING</span>
+          </div>
+          <div class="signal-console__body">
+            <div class="signal-console__frequency" aria-hidden="true">
+              <span>1.42</span>
+              <small>GHz</small>
+              <div class="frequency-bars">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+            <div class="signal-console__readout">
+              <p class="console-prompt">正在扫描来自半人马座方向的中微子信号...</p>
+              <p class="console-message" id="signal-output" aria-live="polite">不要回答！不要回答！不要回答！</p>
+              <p class="console-note">如果回答，发射源将被定位，你们的文明将遭到入侵，你们的世界将被占领。</p>
+            </div>
+          </div>
+          <div class="signal-console__footer">
+            <span>信号强度 <b>97.4%</b></span>
+            <span>来源：未知</span>
+            <button class="text-button" type="button" data-signal-button>
+              <span>重新解码</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 10-2.34 5.66M20 5v6h-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="era-section section" id="eras" aria-labelledby="eras-title">
+      <div class="era-section__radar" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-heading section-heading--split reveal">
+          <div>
+            <p class="eyebrow"><span>02</span> / ERAS</p>
+            <h2 id="eras-title">文明的时间轴</h2>
+          </div>
+          <p class="section-heading__description">
+            从红岸的秘密电波，到归零者重启宇宙，每一个纪元都留下了一道无法抹去的坐标。
+          </p>
+        </div>
+
+        <div class="era-layout reveal">
+          <div class="era-tabs" role="tablist" aria-label="三体纪元时间轴">
+            <button class="era-tab is-active" id="tab-red-coast" type="button" role="tab" aria-selected="true" aria-controls="panel-red-coast" data-era="red-coast">
+              <span class="era-tab__year">1960s</span>
+              <span class="era-tab__name">红岸纪元</span>
+              <i aria-hidden="true"></i>
+            </button>
+            <button class="era-tab" id="tab-crisis" type="button" role="tab" aria-selected="false" aria-controls="panel-crisis" data-era="crisis" tabindex="-1">
+              <span class="era-tab__year">2200s</span>
+              <span class="era-tab__name">危机纪元</span>
+              <i aria-hidden="true"></i>
+            </button>
+            <button class="era-tab" id="tab-deterrence" type="button" role="tab" aria-selected="false" aria-controls="panel-deterrence" data-era="deterrence" tabindex="-1">
+              <span class="era-tab__year">2208</span>
+              <span class="era-tab__name">威慑纪元</span>
+              <i aria-hidden="true"></i>
+            </button>
+            <button class="era-tab" id="tab-broadcast" type="button" role="tab" aria-selected="false" aria-controls="panel-broadcast" data-era="broadcast" tabindex="-1">
+              <span class="era-tab__year">2270</span>
+              <span class="era-tab__name">广播纪元</span>
+              <i aria-hidden="true"></i>
+            </button>
+            <button class="era-tab" id="tab-bunker" type="button" role="tab" aria-selected="false" aria-controls="panel-bunker" data-era="bunker" tabindex="-1">
+              <span class="era-tab__year">2279</span>
+              <span class="era-tab__name">掩体纪元</span>
+              <i aria-hidden="true"></i>
+            </button>
+            <button class="era-tab" id="tab-galaxy" type="button" role="tab" aria-selected="false" aria-controls="panel-galaxy" data-era="galaxy" tabindex="-1">
+              <span class="era-tab__year">∞</span>
+              <span class="era-tab__name">银河纪元</span>
+              <i aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="era-panels">
+            <article class="era-panel is-active" id="panel-red-coast" role="tabpanel" aria-labelledby="tab-red-coast">
+              <span class="era-panel__index">01 / FIRST CONTACT</span>
+              <h3>人类第一次听见<br>宇宙的呼吸</h3>
+              <p>红岸基地将太阳作为放大器，向宇宙发出了一声无人知晓的问候。叶文洁在沉默中按下了发射键，也按下了人类文明命运的另一条分支。</p>
+              <div class="era-panel__facts"><span>坐标暴露</span><span>第一次接触</span><span>三体舰队启航</span></div>
+              <span class="era-panel__year" aria-hidden="true">1969</span>
+            </article>
+            <article class="era-panel" id="panel-crisis" role="tabpanel" aria-labelledby="tab-crisis" hidden>
+              <span class="era-panel__index">02 / CRISIS</span>
+              <h3>当倒计时<br>写在整片天空</h3>
+              <p>三体舰队正在逼近，人类进入危机纪元。面壁计划启动，四位面壁者以孤独为武器，在无法被看透的思想深处构思反击。</p>
+              <div class="era-panel__facts"><span>面壁计划</span><span>智子封锁</span><span>太空军建立</span></div>
+              <span class="era-panel__year" aria-hidden="true">2200</span>
+            </article>
+            <article class="era-panel" id="panel-deterrence" role="tabpanel" aria-labelledby="tab-deterrence" hidden>
+              <span class="era-panel__index">03 / DETERRENCE</span>
+              <h3>一个人的沉默<br>悬停两个文明</h3>
+              <p>罗辑以宇宙坐标的暴露为筹码，建立起黑暗森林威慑。新的平衡并不温柔，它只是一把始终抵在宇宙额头的枪。</p>
+              <div class="era-panel__facts"><span>执剑人</span><span>引力波天线</span><span>脆弱和平</span></div>
+              <span class="era-panel__year" aria-hidden="true">2208</span>
+            </article>
+            <article class="era-panel" id="panel-broadcast" role="tabpanel" aria-labelledby="tab-broadcast" hidden>
+              <span class="era-panel__index">04 / BROADCAST</span>
+              <h3>坐标已被点亮<br>猎手开始回应</h3>
+              <p>威慑终止后，三体世界的坐标被广播。黑暗森林中的猎手终于扣动扳机，一个恒星系在光年之外悄然消失。</p>
+              <div class="era-panel__facts"><span>坐标广播</span><span>光粒打击</span><span>三体危机终结</span></div>
+              <span class="era-panel__year" aria-hidden="true">2270</span>
+            </article>
+            <article class="era-panel" id="panel-bunker" role="tabpanel" aria-labelledby="tab-bunker" hidden>
+              <span class="era-panel__index">05 / BUNKER</span>
+              <h3>躲进木星背后<br>就能躲过宇宙吗</h3>
+              <p>人类将城市迁往巨行星背面，试图建造最后的掩体。可真正的降维打击并不沿着三维世界熟悉的路径到来。</p>
+              <div class="era-panel__facts"><span>掩体城市</span><span>曲率驱动</span><span>二向箔</span></div>
+              <span class="era-panel__year" aria-hidden="true">2279</span>
+            </article>
+            <article class="era-panel" id="panel-galaxy" role="tabpanel" aria-labelledby="tab-galaxy" hidden>
+              <span class="era-panel__index">06 / GALAXY</span>
+              <h3>宇宙很大<br>生活更大</h3>
+              <p>太阳系成为一幅二维长卷，幸存者驶向银河深处。文明在时间之外留下回声，而归零者正在等待宇宙重新坍缩。</p>
+              <div class="era-panel__facts"><span>星舰文明</span><span>小宇宙</span><span>宇宙归零</span></div>
+              <span class="era-panel__year" aria-hidden="true">∞</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="civilization-section section" id="civilizations" aria-labelledby="civilizations-title">
+      <div class="container">
+        <div class="section-heading section-heading--wide reveal">
+          <p class="eyebrow"><span>03</span> / CIVILIZATIONS</p>
+          <h2 id="civilizations-title">两种文明，<em>同一片黑暗</em></h2>
+          <p class="section-heading__description">一个在恒星的混乱中求生，一个在温柔的阳光下成长。宇宙没有为任何一方准备答案。</p>
+        </div>
+
+        <div class="civilization-grid">
+          <article class="civil-card civil-card--trisolaris reveal">
+            <div class="civil-card__topline"><span>档案编号 / T-001</span><span class="civil-card__tag">三体文明</span></div>
+            <div class="civil-art civil-art--suns" aria-hidden="true">
+              <span class="civil-sun civil-sun--one"></span><span class="civil-sun civil-sun--two"></span><span class="civil-sun civil-sun--three"></span>
+              <span class="civil-planet"></span><span class="civil-ring civil-ring--one"></span><span class="civil-ring civil-ring--two"></span>
+            </div>
+            <h3>在乱纪元中<br>学会脱水与重生</h3>
+            <p>三颗太阳的无规律运动塑造了极端的气候与文明性格。生存不是选择，而是每一轮恒纪元到来之前必须完成的集体任务。</p>
+            <dl class="civil-stats"><div><dt>母星</dt><dd>半人马座 α</dd></div><div><dt>恒星</dt><dd>03</dd></div><div><dt>生存策略</dt><dd>脱水 / 进化</dd></div></dl>
+          </article>
+          <article class="civil-card civil-card--earth reveal">
+            <div class="civil-card__topline"><span>档案编号 / E-001</span><span class="civil-card__tag">人类文明</span></div>
+            <div class="civil-art civil-art--earth" aria-hidden="true">
+              <span class="earth-glow"></span><span class="earth"></span><span class="earth-orbit"></span><span class="earth-moon"></span><span class="earth-signal"></span>
+            </div>
+            <h3>在有限的生命里<br>仰望无限的宇宙</h3>
+            <p>人类文明短暂、柔软，却拥有想象力、爱与背叛。正是这些无法被计算的部分，让黑暗森林中出现了一个意外的变量。</p>
+            <dl class="civil-stats"><div><dt>母星</dt><dd>地球</dd></div><div><dt>恒星</dt><dd>01</dd></div><div><dt>生存策略</dt><dd>合作 / 想象</dd></div></dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="character-section section" id="characters" aria-labelledby="characters-title">
+      <div class="container">
+        <div class="section-heading section-heading--split reveal">
+          <div><p class="eyebrow"><span>04</span> / ARCHIVE</p><h2 id="characters-title">被时代选中的人</h2></div>
+          <p class="section-heading__description">他们在不同的时间抬头，看见同一片星空。每一次选择，都让宇宙的未来多出一种可能。</p>
+        </div>
+        <div class="character-grid">
+          <article class="character-card reveal" style="--accent: #b9d9db;"><div class="character-card__meta"><span>01</span><span>天体物理学家</span></div><div class="character-card__sigil" aria-hidden="true"><span>叶</span></div><div class="character-card__content"><h3>叶文洁</h3><p>人类第一次向宇宙发送信号的人，也是把人类命运推向深渊的人。</p><blockquote>“不要回答！”</blockquote></div></article>
+          <article class="character-card reveal" style="--accent: #e1bd78;"><div class="character-card__meta"><span>02</span><span>面壁者</span></div><div class="character-card__sigil" aria-hidden="true"><span>罗</span></div><div class="character-card__content"><h3>罗辑</h3><p>从浪子到执剑人，他在黑暗森林中推导出唯一的生存法则。</p><blockquote>“给岁月以文明。”</blockquote></div></article>
+          <article class="character-card reveal" style="--accent: #82b7d6;"><div class="character-card__meta"><span>03</span><span>太空军政委</span></div><div class="character-card__sigil" aria-hidden="true"><span>章</span></div><div class="character-card__content"><h3>章北海</h3><p>他比所有人都更早看到失败，并用一生完成了一次必胜的逃亡。</p><blockquote>“前进四。”</blockquote></div></article>
+          <article class="character-card reveal" style="--accent: #e4b7a9;"><div class="character-card__meta"><span>04</span><span>执剑人</span></div><div class="character-card__sigil" aria-hidden="true"><span>程</span></div><div class="character-card__content"><h3>程心</h3><p>她承载了人类最柔软的道德，也许正因为太柔软，才无法握住那把手枪。</p><blockquote>“我选择人性。”</blockquote></div></article>
+          <article class="character-card reveal" style="--accent: #c5c7a5;"><div class="character-card__meta"><span>05</span><span>警察 / 守护者</span></div><div class="character-card__sigil" aria-hidden="true"><span>史</span></div><div class="character-card__content"><h3>史强</h3><p>他不懂宇宙，却比许多人更懂如何在宇宙中保护一个普通人。</p><blockquote>“邪乎到家必有鬼。”</blockquote></div></article>
+          <article class="character-card reveal" style="--accent: #a9b8e6;"><div class="character-card__meta"><span>06</span><span>情报员</span></div><div class="character-card__sigil" aria-hidden="true"><span>云</span></div><div class="character-card__content"><h3>云天明</h3><p>他把三个童话送进宇宙深处，也将人类的最后希望藏进故事里。</p><blockquote>“我们的星星。”</blockquote></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-forest-section section" id="dark-forest" aria-labelledby="dark-forest-title">
+      <div class="dark-forest-section__noise" aria-hidden="true"></div>
+      <div class="container dark-forest-layout">
+        <div class="dark-forest-copy reveal">
+          <p class="eyebrow"><span>05</span> / THE DARK FOREST</p>
+          <h2 id="dark-forest-title">宇宙是一座<br><em>黑暗森林</em></h2>
+          <p>每个文明都是带枪的猎人，像幽灵般潜行于林间。他必须小心，因为林中到处都有与他一样潜行的猎人。</p>
+          <div class="axioms"><article class="axiom"><span>公理 01</span><p>生存是文明的第一需要。</p></article><article class="axiom"><span>公理 02</span><p>文明不断增长和扩张，但宇宙中的物质总量保持不变。</p></article></div>
+          <blockquote class="forest-quote"><span aria-hidden="true">“</span>毁灭你，与你有何相干？</blockquote>
+        </div>
+        <div class="forest-sim reveal" data-forest-sim>
+          <div class="forest-sim__header"><span>DARK_FOREST / SIMULATION</span><span class="forest-sim__status" id="forest-status" aria-live="polite">坐标静默</span></div>
+          <div class="forest-sim__map" aria-hidden="true">
+            <span class="map-grid"></span><span class="map-star map-star--earth" data-star="earth"><i></i>地球</span><span class="map-star map-star--trisolaris" data-star="trisolaris"><i></i>三体</span><span class="map-star map-star--hunter" data-star="hunter"><i></i>未知</span><span class="map-beam map-beam--one"></span><span class="map-beam map-beam--two"></span><span class="map-strike"></span><span class="map-reading">SCANNING SECTOR 03</span>
+          </div>
+          <div class="forest-sim__console"><p id="forest-output">所有文明保持静默。森林暂时安全。</p><button class="button button--warning" id="broadcast-button" type="button"><span>向宇宙广播坐标</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20v-7M7.05 9.05a7 7 0 019.9 0M4.22 6.22a11 11 0 0115.56 0M12 3v2"/></svg></button></div>
+          <div class="forest-sim__footer"><span>暴露度 <b id="exposure-value">00%</b></span><button class="text-button text-button--muted" id="reset-forest" type="button">重置实验</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="archive-section section" id="archives" aria-labelledby="archives-title">
+      <div class="container">
+        <div class="section-heading section-heading--split reveal"><div><p class="eyebrow"><span>06</span> / SCENES</p><h2 id="archives-title">名场面档案</h2></div><p class="section-heading__description">有些瞬间改变了文明，有些物体则改变了我们对宇宙尺度的想象。</p></div>
+        <div class="archive-grid">
+          <article class="archive-card reveal"><div class="archive-card__visual archive-card__visual--guqin" aria-hidden="true"><span></span><i></i></div><span class="archive-card__number">01</span><h3>古筝行动</h3><p>巴拿马运河上，纳米丝在晨雾中展开。审判日号被切割成四十多片薄片。</p><span class="archive-card__tag">纳米材料 · 巴拿马</span></article>
+          <article class="archive-card reveal"><div class="archive-card__visual archive-card__visual--wallfacer" aria-hidden="true"><span></span><i></i></div><span class="archive-card__number">02</span><h3>面壁计划</h3><p>四位面壁者将真实战略藏进大脑，在智子的注视下建立一个无法被读取的战场。</p><span class="archive-card__tag">人类战略 · 孤独</span></article>
+          <article class="archive-card reveal"><div class="archive-card__visual archive-card__visual--droplet" aria-hidden="true"><span></span><i></i></div><span class="archive-card__number">03</span><h3>水滴</h3><p>完美光滑的探测器以最谦逊的形态出现，随后在三十分钟内穿透整支舰队。</p><span class="archive-card__tag">强相互作用力 · 探测器</span></article>
+          <article class="archive-card reveal"><div class="archive-card__visual archive-card__visual--foil" aria-hidden="true"><span></span><i></i></div><span class="archive-card__number">04</span><h3>二向箔</h3><p>一张没有厚度的小纸片，让整个太阳系跌入二维，成为宇宙中的一幅长卷。</p><span class="archive-card__tag">维度打击 · 太阳系</span></article>
+          <article class="archive-card reveal"><div class="archive-card__visual archive-card__visual--ring" aria-hidden="true"><span></span><i></i></div><span class="archive-card__number">05</span><h3>归零者</h3><p>当宇宙走向热寂，归零者向所有文明广播：归还质量，让宇宙重新开始。</p><span class="archive-card__tag">宇宙重启 · 归零</span></article>
+          <article class="archive-card reveal"><div class="archive-card__visual archive-card__visual--pocket" aria-hidden="true"><span></span><i></i></div><span class="archive-card__number">06</span><h3>小宇宙</h3><p>在时间之外，一扇门后藏着最后的田园。可宇宙的未来，仍然需要有人归还那几公斤质量。</p><span class="archive-card__tag">独立时空 · 最后的选择</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ending-section" id="ending" aria-labelledby="ending-title">
+      <div class="ending-section__halo" aria-hidden="true"></div>
+      <div class="container ending-section__inner reveal">
+        <p class="eyebrow"><span>07</span> / END OF ARCHIVE</p>
+        <h2 id="ending-title">宇宙很大，<br><em>生活更大。</em></h2>
+        <p>所有宏大叙事最终都会回到一个微小的愿望：在黑暗中留下光，在有限的时间里认真生活。</p>
+        <div class="ending-section__actions">
+          <a class="button button--primary" href="#home">重新进入宇宙</a>
+          <a class="button button--ghost" href="docs/三体宇宙_作品说明.docx" download>下载作品说明</a>
+        </div>
+      </div>
+      <p class="ending-section__coordinate" aria-hidden="true">EARTH · SOL · 0.0000001%</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="brand brand--footer" href="#home" aria-label="返回三体宇宙首页"><span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand__text"><strong>三体宇宙</strong><small>THE THREE-BODY UNIVERSE</small></span></a>
+      <p>Web 前端基础课程设计 · 非官方主题作品<br>基于刘慈欣《三体》系列创作</p>
+      <div class="site-footer__meta"><span>DESIGNED FOR THE DARK FOREST</span><a href="#home">回到顶端 ↑</a></div>
+    </div>
+    <div class="site-footer__marquee" aria-hidden="true"><span>给岁月以文明，而不是给文明以岁月 · 给岁月以文明，而不是给文明以岁月 · 给岁月以文明，而不是给文明以岁月 ·</span></div>
+  </footer>
+
+  <noscript><p class="noscript-note">此网页的星空、纪元切换与黑暗森林实验需要启用 JavaScript。</p></noscript>
+</body>
+</html>
